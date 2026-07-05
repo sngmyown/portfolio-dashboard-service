@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#020617" />
   <meta name="description" content="스윙, 장기투자, 배당/커버드콜 계좌를 한 화면에서 관리하는 개인투자자용 웹 포트폴리오 대시보드 제작 서비스입니다." />
-  <title>Premium Landing V4 | 개인투자자용 3계좌 통합 대시보드 제작</title>
+  <title>Premium Landing V10 | 개인투자자용 3계좌 통합 대시보드 제작</title>
   <style>
 :root {
   color-scheme: dark;
@@ -1272,6 +1272,397 @@ h3 {
   }
 }
 
+
+/* Premium Landing V6: raised pie slices, not tower/castle */
+.runway-head {
+  display: block !important;
+  text-align: left !important;
+  max-width: 920px !important;
+  margin: 0 0 2.2rem 0 !important;
+}
+
+.runway-head .section-kicker {
+  margin-bottom: 0.72rem !important;
+}
+
+.runway-head h2 {
+  max-width: 880px !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.interactive-pies {
+  height: 470px !important;
+}
+
+.account-orb {
+  min-height: 282px !important;
+  align-content: start !important;
+  gap: 0.34rem !important;
+}
+
+.orb-long {
+  min-height: 324px !important;
+}
+
+.pie-disk,
+.modal-pie {
+  display: none !important;
+}
+
+.raised-pie {
+  display: block;
+  width: 172px;
+  height: 138px;
+  margin: 0.28rem auto 0.1rem;
+  transform: translateZ(0);
+  transition: transform 220ms ease, filter 220ms ease;
+}
+
+.orb-long .raised-pie {
+  width: 206px;
+  height: 166px;
+}
+
+.account-orb:hover .raised-pie,
+.account-orb:focus-visible .raised-pie {
+  transform: translateY(-5px) scale(1.035);
+  filter: saturate(1.08);
+}
+
+.raised-pie-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.raised-pie-top,
+.raised-pie-side {
+  transition: opacity 200ms ease, transform 200ms ease, filter 200ms ease;
+}
+
+.raised-pie-top {
+  filter: saturate(1.05);
+}
+
+.raised-pie-label {
+  fill: rgba(255,255,255,0.88);
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+}
+
+.stage-hint {
+  bottom: 1rem !important;
+}
+
+.modal-chart-stage {
+  min-height: 500px !important;
+  overflow: visible !important;
+}
+
+.modal-raised-pie {
+  width: min(560px, 74vw);
+  height: min(420px, 56vw);
+  display: block;
+}
+
+.modal-raised-pie .raised-pie-label {
+  font-size: 14px;
+}
+
+@media (max-width: 1100px) {
+  .interactive-pies {
+    height: auto !important;
+  }
+
+  .account-orb,
+  .orb-long {
+    min-height: 300px !important;
+  }
+
+  .raised-pie,
+  .orb-long .raised-pie {
+    width: 206px;
+    height: 166px;
+  }
+}
+
+@media (max-width: 660px) {
+  .runway-head {
+    margin-bottom: 1.4rem !important;
+  }
+
+  .raised-pie,
+  .orb-long .raised-pie {
+    width: 190px;
+    height: 152px;
+  }
+
+  .modal-chart-stage {
+    min-height: 330px !important;
+  }
+
+  .modal-raised-pie {
+    width: 330px;
+    height: 260px;
+  }
+}
+
+
+/* Premium Landing V7: stronger pie colors */
+.raised-pie-svg {
+  filter: saturate(1.22) contrast(1.08);
+}
+
+.raised-pie-top {
+  opacity: 1 !important;
+  filter: saturate(1.18) contrast(1.08);
+}
+
+.raised-pie-side {
+  opacity: 1 !important;
+  filter: saturate(1.16) contrast(1.08);
+}
+
+.modal-raised-pie .raised-pie-svg {
+  filter: saturate(1.28) contrast(1.1);
+}
+
+.modal-raised-pie .raised-pie-top,
+.modal-raised-pie .raised-pie-side {
+  opacity: 1 !important;
+}
+
+.raised-pie-label {
+  opacity: 0.98 !important;
+  fill: rgba(255,255,255,0.96) !important;
+}
+
+
+/* Premium Landing V8: visible lower layers instead of broken height offsets */
+.raised-pie {
+  width: 180px !important;
+  height: 140px !important;
+}
+
+.orb-long .raised-pie {
+  width: 212px !important;
+  height: 168px !important;
+}
+
+.raised-pie-svg.visible-layer-svg {
+  filter: saturate(1.18) contrast(1.08);
+}
+
+.visible-layer-top,
+.visible-layer-side,
+.visible-layer-divider {
+  vector-effect: non-scaling-stroke;
+}
+
+.visible-layer-top {
+  opacity: 1 !important;
+  filter: saturate(1.08) contrast(1.05);
+}
+
+.visible-layer-side {
+  opacity: 1 !important;
+  filter: saturate(1.12) contrast(1.08);
+}
+
+.visible-layer-divider {
+  opacity: 0.82;
+}
+
+.modal-raised-pie {
+  width: min(580px, 76vw) !important;
+  height: min(430px, 58vw) !important;
+}
+
+.modal-raised-pie .visible-layer-svg {
+  filter: saturate(1.22) contrast(1.1);
+}
+
+.modal-raised-pie .visible-layer-top {
+  filter: saturate(1.12) contrast(1.08);
+}
+
+.modal-raised-pie .visible-layer-side {
+  filter: saturate(1.16) contrast(1.1);
+}
+
+@media (max-width: 660px) {
+  .raised-pie,
+  .orb-long .raised-pie {
+    width: 198px !important;
+    height: 156px !important;
+  }
+
+  .modal-raised-pie {
+    width: 340px !important;
+    height: 270px !important;
+  }
+}
+
+
+/* Premium Landing V9: front low slices + rear high slice */
+.raised-pie {
+  width: 188px !important;
+  height: 150px !important;
+}
+
+.orb-long .raised-pie {
+  width: 218px !important;
+  height: 176px !important;
+}
+
+.raised-pie-svg.stepped-pie-svg {
+  filter: saturate(1.22) contrast(1.08);
+  overflow: visible;
+}
+
+.stepped-pie-top,
+.stepped-pie-wall,
+.stepped-pie-radial-wall {
+  vector-effect: non-scaling-stroke;
+}
+
+.stepped-pie-top {
+  opacity: 1 !important;
+  filter: saturate(1.1) contrast(1.06);
+}
+
+.stepped-pie-wall {
+  opacity: 1 !important;
+  filter: saturate(1.16) contrast(1.1);
+}
+
+.stepped-pie-radial-wall {
+  opacity: 0.9;
+}
+
+.modal-raised-pie {
+  width: min(600px, 78vw) !important;
+  height: min(450px, 60vw) !important;
+}
+
+.modal-raised-pie .stepped-pie-svg {
+  filter: saturate(1.28) contrast(1.1);
+}
+
+.modal-raised-pie .raised-pie-label {
+  font-size: 14px;
+  opacity: 0.98 !important;
+  fill: rgba(255,255,255,0.97) !important;
+  paint-order: stroke;
+  stroke: rgba(0,0,0,0.28);
+  stroke-width: 2px;
+}
+
+@media (max-width: 660px) {
+  .raised-pie,
+  .orb-long .raised-pie {
+    width: 204px !important;
+    height: 162px !important;
+  }
+
+  .modal-raised-pie {
+    width: 350px !important;
+    height: 280px !important;
+  }
+}
+
+
+/* Premium Landing V10: more diagonal tilt + higher-slice-color gap fills */
+.raised-pie {
+  width: 194px !important;
+  height: 156px !important;
+}
+
+.orb-long .raised-pie {
+  width: 224px !important;
+  height: 182px !important;
+}
+
+.raised-pie-svg.stepped-pie-svg {
+  filter: saturate(1.24) contrast(1.08);
+  overflow: visible;
+  transform: rotate(-13deg) skewX(-12deg);
+  transform-origin: 50% 60%;
+}
+
+.stepped-pie-group {
+  transform-box: fill-box;
+  transform-origin: 50% 56%;
+}
+
+.stepped-pie-top,
+.stepped-pie-wall,
+.stepped-pie-radial-wall {
+  vector-effect: non-scaling-stroke;
+}
+
+.stepped-pie-top {
+  opacity: 1 !important;
+  filter: saturate(1.12) contrast(1.07);
+}
+
+.stepped-pie-wall {
+  opacity: 1 !important;
+  filter: saturate(1.18) contrast(1.1);
+}
+
+.stepped-pie-radial-wall {
+  opacity: 0.96;
+}
+
+.stepped-gap-fill {
+  filter: saturate(1.22) contrast(1.1);
+}
+
+.modal-raised-pie {
+  width: min(620px, 79vw) !important;
+  height: min(470px, 61vw) !important;
+}
+
+.modal-raised-pie .stepped-pie-svg {
+  transform: rotate(-15deg) skewX(-14deg);
+  transform-origin: 50% 61%;
+  filter: saturate(1.3) contrast(1.1);
+}
+
+.modal-raised-pie .raised-pie-label {
+  font-size: 14px;
+  opacity: 0.98 !important;
+  fill: rgba(255,255,255,0.97) !important;
+  paint-order: stroke;
+  stroke: rgba(0,0,0,0.28);
+  stroke-width: 2px;
+}
+
+@media (max-width: 660px) {
+  .raised-pie,
+  .orb-long .raised-pie {
+    width: 208px !important;
+    height: 168px !important;
+  }
+
+  .modal-raised-pie {
+    width: 360px !important;
+    height: 292px !important;
+  }
+
+  .raised-pie-svg.stepped-pie-svg {
+    transform: rotate(-11deg) skewX(-11deg);
+  }
+
+  .modal-raised-pie .stepped-pie-svg {
+    transform: rotate(-13deg) skewX(-12deg);
+  }
+}
+
   </style>
 </head>
 <body>
@@ -1300,7 +1691,7 @@ h3 {
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Premium Landing V4 · Typography Fixed</p>
+        <p class="eyebrow">Premium Landing V10 · Diagonal Filled Gaps</p>
         <h1>
           흩어진 계좌를<br />
           하나의 화면으로
@@ -1335,27 +1726,27 @@ h3 {
         <div class="interactive-pies" aria-label="계좌별 인터랙티브 파이차트">
           <button class="account-orb orb-swing" type="button" data-account="swing" aria-label="스윙 계좌 확대 보기">
             <span class="orb-label">Swing</span>
-            <i class="pie-disk pie-swing"></i>
+            <span class="raised-pie" data-pie="swing" aria-hidden="true"></span>
             <strong>24%</strong>
             <small>스윙 계좌</small>
           </button>
 
           <button class="account-orb orb-long" type="button" data-account="long" aria-label="장기투자 계좌 확대 보기">
             <span class="orb-label">Long</span>
-            <i class="pie-disk pie-long"></i>
+            <span class="raised-pie" data-pie="long" aria-hidden="true"></span>
             <strong>52%</strong>
             <small>장기투자 계좌</small>
           </button>
 
           <button class="account-orb orb-income" type="button" data-account="income" aria-label="배당 커버드콜 계좌 확대 보기">
             <span class="orb-label">Cashflow</span>
-            <i class="pie-disk pie-income"></i>
+            <span class="raised-pie" data-pie="income" aria-hidden="true"></span>
             <strong>24%</strong>
             <small>배당·커버드콜</small>
           </button>
         </div>
 
-        <p class="stage-hint">계좌 카드를 클릭하면 케이크형 3D 차트가 확대됩니다.</p>
+        <p class="stage-hint">계좌 카드를 클릭하면 더 대각선으로 누운 3D 파이 차트가 확대됩니다. 낮은 조각 사이 공백은 더 높은 조각의 색으로 연결됩니다.</p>
       </section>
     </section>
 
@@ -1609,7 +2000,7 @@ h3 {
         </div>
 
         <div class="modal-chart-stage">
-          <div class="modal-pie" id="modalPie"></div>
+          <div class="modal-raised-pie" id="modalPie" data-pie="long" aria-hidden="true"></div>
         </div>
       </div>
     </section>
@@ -1620,6 +2011,225 @@ h3 {
   </footer>
 
   <script>
+
+    function pointOnEllipse(cx, cy, rx, ry, angleDeg) {
+      const rad = (angleDeg * Math.PI) / 180;
+      return {
+        x: cx + rx * Math.cos(rad),
+        y: cy + ry * Math.sin(rad)
+      };
+    }
+
+    function wedgePath(cx, cy, rx, ry, start, end) {
+      const p1 = pointOnEllipse(cx, cy, rx, ry, start);
+      const p2 = pointOnEllipse(cx, cy, rx, ry, end);
+      const largeArc = Math.abs(end - start) > 180 ? 1 : 0;
+      return [
+        `M ${cx.toFixed(2)} ${cy.toFixed(2)}`,
+        `L ${p1.x.toFixed(2)} ${p1.y.toFixed(2)}`,
+        `A ${rx} ${ry} 0 ${largeArc} 1 ${p2.x.toFixed(2)} ${p2.y.toFixed(2)}`,
+        "Z"
+      ].join(" ");
+    }
+
+    function sliceWallPath(cx, baseCy, rx, ry, start, end, height) {
+      const topCy = baseCy - height;
+      const p1Top = pointOnEllipse(cx, topCy, rx, ry, start);
+      const p2Top = pointOnEllipse(cx, topCy, rx, ry, end);
+      const p1Base = pointOnEllipse(cx, baseCy, rx, ry, start);
+      const p2Base = pointOnEllipse(cx, baseCy, rx, ry, end);
+      const largeArc = Math.abs(end - start) > 180 ? 1 : 0;
+      return [
+        `M ${p1Top.x.toFixed(2)} ${p1Top.y.toFixed(2)}`,
+        `A ${rx} ${ry} 0 ${largeArc} 1 ${p2Top.x.toFixed(2)} ${p2Top.y.toFixed(2)}`,
+        `L ${p2Base.x.toFixed(2)} ${p2Base.y.toFixed(2)}`,
+        `A ${rx} ${ry} 0 ${largeArc} 0 ${p1Base.x.toFixed(2)} ${p1Base.y.toFixed(2)}`,
+        "Z"
+      ].join(" ");
+    }
+
+    function radialWallPath(cx, baseCy, rx, ry, angle, heightA, heightB) {
+      const topCyA = baseCy - heightA;
+      const topCyB = baseCy - heightB;
+      const pA = pointOnEllipse(cx, topCyA, rx, ry, angle);
+      const pB = pointOnEllipse(cx, topCyB, rx, ry, angle);
+      const pBase = pointOnEllipse(cx, baseCy, rx, ry, angle);
+      return [
+        `M ${cx.toFixed(2)} ${(topCyA).toFixed(2)}`,
+        `L ${pA.x.toFixed(2)} ${pA.y.toFixed(2)}`,
+        `L ${pBase.x.toFixed(2)} ${pBase.y.toFixed(2)}`,
+        `L ${pB.x.toFixed(2)} ${pB.y.toFixed(2)}`,
+        `L ${cx.toFixed(2)} ${(topCyB).toFixed(2)}`,
+        "Z"
+      ].join(" ");
+    }
+
+    function renderRaisedPie(target, activeKey = "long", isModal = false) {
+      /*
+        V10 intent:
+        - Small slices stay in the front and lower.
+        - The large long slice stays in the rear and higher.
+        - The whole pie is presented on a stronger diagonal tilt.
+        - Height gaps between slices are filled with the higher slice color (purple / long slice).
+      */
+      const segments = [
+        {
+          key: "long",
+          label: "Long",
+          value: 52,
+          start: 177.2,
+          end: 364.4,
+          height: 60,
+          top: "#7C3AED",
+          sideStart: "#5B21B6",
+          sideEnd: "#2E1065"
+        },
+        {
+          key: "swing",
+          label: "Swing",
+          value: 24,
+          start: 4.4,
+          end: 90.8,
+          height: 24,
+          top: "#00A3FF",
+          sideStart: "#0078E8",
+          sideEnd: "#003C7A"
+        },
+        {
+          key: "income",
+          label: "Cashflow",
+          value: 24,
+          start: 90.8,
+          end: 177.2,
+          height: 24,
+          top: "#FF8A00",
+          sideStart: "#EA580C",
+          sideEnd: "#7C2D12"
+        }
+      ];
+
+      const cx = 120;
+      const baseCy = 108;
+      const rx = 78;
+      const ry = 50;
+
+      const backWalls = [];
+      const frontWalls = [];
+      const tops = [];
+      const labels = [];
+      const radialWalls = [];
+
+      segments.forEach((seg) => {
+        const topCy = baseCy - seg.height;
+        const isFront = seg.key !== "long";
+        const active = seg.key === activeKey;
+
+        const wall = `
+          <path
+            class="stepped-pie-wall stepped-pie-${seg.key}"
+            d="${sliceWallPath(cx, baseCy, rx, ry, seg.start, seg.end, seg.height)}"
+            fill="url(#side-${seg.key})"
+            stroke="rgba(255,255,255,0.16)"
+            stroke-width="0.82"
+          />
+        `;
+
+        if (isFront) {
+          frontWalls.push(wall);
+        } else {
+          backWalls.push(wall);
+        }
+
+        tops.push(`
+          <path
+            class="stepped-pie-top stepped-pie-${seg.key}"
+            d="${wedgePath(cx, topCy, rx, ry, seg.start, seg.end)}"
+            fill="${seg.top}"
+            stroke="${active ? "rgba(255,255,255,0.96)" : "rgba(255,255,255,0.38)"}"
+            stroke-width="${active ? 2.05 : 1.08}"
+          />
+        `);
+
+        if (isModal) {
+          const mid = seg.start + (seg.end - seg.start) / 2;
+          const lp = pointOnEllipse(cx, topCy, rx * 0.58, ry * 0.58, mid);
+          labels.push(`
+            <text
+              x="${lp.x.toFixed(2)}"
+              y="${lp.y.toFixed(2)}"
+              text-anchor="middle"
+              dominant-baseline="middle"
+              class="raised-pie-label"
+            >${seg.value}%</text>
+          `);
+        }
+      });
+
+      // Fill the visible vertical gaps with the higher slice's color (the long purple slice).
+      radialWalls.push(`
+        <path
+          class="stepped-pie-radial-wall stepped-gap-fill"
+          d="${radialWallPath(cx, baseCy, rx, ry, 177.2, 24, 60)}"
+          fill="url(#gap-high-side)"
+          stroke="rgba(255,255,255,0.18)"
+          stroke-width="0.86"
+        />
+      `);
+
+      radialWalls.push(`
+        <path
+          class="stepped-pie-radial-wall stepped-gap-fill"
+          d="${radialWallPath(cx, baseCy, rx, ry, 4.4, 60, 24)}"
+          fill="url(#gap-high-side)"
+          stroke="rgba(255,255,255,0.18)"
+          stroke-width="0.86"
+        />
+      `);
+
+      target.innerHTML = `
+        <svg class="raised-pie-svg stepped-pie-svg" viewBox="0 0 240 190" role="img" aria-label="대각선 방향으로 누운 3D 파이 차트">
+          <defs>
+            <linearGradient id="side-swing" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0078E8"/>
+              <stop offset="100%" stop-color="#003C7A"/>
+            </linearGradient>
+            <linearGradient id="side-long" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#5B21B6"/>
+              <stop offset="100%" stop-color="#2E1065"/>
+            </linearGradient>
+            <linearGradient id="side-income" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#EA580C"/>
+              <stop offset="100%" stop-color="#7C2D12"/>
+            </linearGradient>
+            <linearGradient id="gap-high-side" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#6D28D9"/>
+              <stop offset="100%" stop-color="#2E1065"/>
+            </linearGradient>
+            <filter id="pie-soft-shadow" x="-24%" y="-28%" width="148%" height="184%">
+              <feDropShadow dx="0" dy="26" stdDeviation="12" flood-color="#000000" flood-opacity="0.58"/>
+            </filter>
+          </defs>
+
+          <ellipse cx="120" cy="157" rx="90" ry="22" fill="rgba(0,0,0,0.54)" filter="url(#pie-soft-shadow)"/>
+
+          <g class="stepped-pie-group" filter="url(#pie-soft-shadow)">
+            <ellipse cx="120" cy="108" rx="78" ry="50" fill="rgba(5,5,7,0.34)"/>
+            ${backWalls.join("")}
+            ${radialWalls.join("")}
+            ${frontWalls.join("")}
+            ${tops.join("")}
+          </g>
+
+          <ellipse cx="99" cy="40" rx="35" ry="13" fill="rgba(255,255,255,0.2)" opacity="0.82"/>
+          ${labels.join("")}
+        </svg>
+      `;
+    }
+
+
+
+
+
     const accountData = {
       swing: {
         title: "스윙 계좌",
@@ -1669,7 +2279,8 @@ h3 {
       modalValue.textContent = data.value;
       modalShare.textContent = data.share;
       modalFeature.textContent = data.feature;
-      modalPie.className = "modal-pie " + data.pieClass;
+      modalPie.className = "modal-raised-pie";
+      renderRaisedPie(modalPie, type, true);
 
       modal.setAttribute("aria-hidden", "false");
       document.body.classList.add("modal-open");
@@ -1691,6 +2302,12 @@ h3 {
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") closeModal();
     });
+
+    document.querySelectorAll(".raised-pie").forEach((chart) => {
+      renderRaisedPie(chart, chart.dataset.pie || "long", false);
+    });
+
+    renderRaisedPie(modalPie, "long", true);
   </script>
 </body>
 </html>
