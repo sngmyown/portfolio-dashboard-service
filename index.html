@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#020617" />
   <meta name="description" content="스윙, 장기투자, 배당/커버드콜 계좌를 한 화면에서 관리하는 개인투자자용 웹 포트폴리오 대시보드 제작 서비스입니다." />
-  <title>Premium Landing V13 | 실제 대시보드 스크린샷 캐러셀</title>
+  <title>Premium Landing V14 | 실제 3A 대시보드 스크린샷 캐러셀</title>
   <style>
 :root {
   color-scheme: dark;
@@ -1697,6 +1697,24 @@ h3 {
 @media(max-width:1100px){.screenshot-carousel-stage,.dashboard-carousel{min-height:auto!important}.carousel-frame,.carousel-frame img{min-height:460px}}
 @media(max-width:660px){.dashboard-carousel{padding:.8rem;border-radius:1.35rem}.carousel-frame{min-height:430px;border-radius:1.2rem}.carousel-frame img{min-height:430px}.carousel-frame figcaption{left:.8rem;right:.8rem;bottom:.8rem;padding:.85rem}.carousel-arrow{width:38px;height:48px;font-size:1.85rem}.carousel-topline{padding-bottom:.75rem}}
 
+
+/* Premium Landing V14: actual screenshot assets applied */
+.carousel-frame {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(14, 165, 233, 0.12), transparent 34rem),
+    #020617;
+}
+
+.carousel-frame img {
+  object-fit: contain !important;
+  background: #020617;
+  padding: 0 !important;
+}
+
+.screenshot-modal-panel img {
+  object-fit: contain !important;
+}
+
   </style>
 </head>
 <body>
@@ -1725,7 +1743,7 @@ h3 {
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Premium Landing V13 · Dashboard Screenshot Carousel</p>
+        <p class="eyebrow">Premium Landing V14 · Real 3A Dashboard Screenshots</p>
         <h1>
           흩어진 계좌를<br />
           하나의 화면으로
@@ -1756,11 +1774,11 @@ h3 {
           </div>
           <button class="carousel-arrow carousel-arrow-prev" type="button" aria-label="이전 대시보드 화면 보기" data-carousel-prev>‹</button>
           <figure class="carousel-frame" data-carousel-open>
-            <img id="carouselImage" src="assets/dashboard-main.svg" alt="전체 현황 대시보드 화면" loading="eager" />
+            <img id="carouselImage" src="assets/dashboard-main.jpg" alt="전체 현황 대시보드 화면" loading="eager" />
             <figcaption>
               <span id="carouselEyebrow">Overview</span>
-              <strong id="carouselTitle">전체 현황</strong>
-              <p id="carouselDescription">3계좌 평가금액, 계좌 비중, 포트폴리오 구성을 한 화면에서 확인합니다.</p>
+              <strong id="carouselTitle">메인 쇼룸</strong>
+              <p id="carouselDescription">3계좌 통합 투자관리 대시보드의 첫 화면과 전체 요약을 보여줍니다.</p>
             </figcaption>
           </figure>
           <button class="carousel-arrow carousel-arrow-next" type="button" aria-label="다음 대시보드 화면 보기" data-carousel-next>›</button>
@@ -1986,7 +2004,8 @@ h3 {
           <li>원하는 납품 방식</li>
         </ul>
         <div class="contact-actions">
-          <a class="primary" href="mailto:sangtheheon1029@gmail.com">이메일 문의하기</a>
+          <a class="primary" href="mailto:your-email@example.com">이메일 문의하기</a>
+          <small>실제 등록 전 your-email@example.com을 본인 이메일로 변경하세요.</small>
         </div>
       </div>
     </section>
@@ -2326,7 +2345,51 @@ h3 {
     });
 
     renderRaisedPie(modalPie, "long", true);
-    const dashboardScreenshots=[{src:"assets/dashboard-main.svg",eyebrow:"Overview",title:"전체 현황",description:"3계좌 평가금액, 계좌 비중, 포트폴리오 구성을 한 화면에서 확인합니다.",alt:"전체 현황 대시보드 화면"},{src:"assets/dashboard-accounts.svg",eyebrow:"Accounts",title:"계좌 및 비중",description:"스윙, 장기투자, 배당주 투자 계좌별 보유 종목과 비중을 분리해서 확인합니다.",alt:"계좌 및 비중 대시보드 화면"},{src:"assets/dashboard-timeline.svg",eyebrow:"Timeline",title:"거래 타임라인",description:"분할매수, 분할매도, 적립식 매수, 추가 납입 기록을 시간순으로 정리합니다.",alt:"거래 타임라인 대시보드 화면"},{src:"assets/dashboard-targets.svg",eyebrow:"Long-term",title:"장기투자 목표 비중",description:"목표 비중과 현재 비중을 비교해 장기투자 계좌의 리밸런싱 기준을 확인합니다.",alt:"장기투자 목표 비중 대시보드 화면"},{src:"assets/dashboard-income.svg",eyebrow:"Cashflow",title:"배당·커버드콜 현금흐름",description:"월별 배당금, 커버드콜 프리미엄, 현금흐름 기록을 한 화면에서 관리합니다.",alt:"배당 커버드콜 현금흐름 대시보드 화면"},{src:"assets/dashboard-privacy.svg",eyebrow:"Privacy",title:"백업·복원 / 프라이버시",description:"브라우저 로컬 저장, JSON 백업·복원, 프라이버시 모드로 민감 정보를 관리합니다.",alt:"백업 복원 프라이버시 대시보드 화면"}];
+    const dashboardScreenshots = [
+      {
+        src: "assets/dashboard-main.jpg",
+        eyebrow: "Showroom",
+        title: "메인 쇼룸",
+        description: "3계좌 통합 투자관리 대시보드의 첫 화면과 전체 요약을 보여줍니다.",
+        alt: "3계좌 통합 투자관리 대시보드 메인 쇼룸 화면"
+      },
+      {
+        src: "assets/dashboard-composition.jpg",
+        eyebrow: "Composition",
+        title: "전체 계좌 통합 현황",
+        description: "전체 계좌 비중과 스윙·장기투자·배당주 투자 계좌를 한 화면에서 비교합니다.",
+        alt: "전체 계좌 통합 현황 화면"
+      },
+      {
+        src: "assets/dashboard-timeline.jpg",
+        eyebrow: "Timeline",
+        title: "거래 타임라인",
+        description: "분할 매수·매도·적립식 기록을 날짜별로 정리하고 보유 수량에 반영합니다.",
+        alt: "거래 타임라인 화면"
+      },
+      {
+        src: "assets/dashboard-targets.jpg",
+        eyebrow: "Long-term",
+        title: "장기투자 목표 비중",
+        description: "장기투자 계좌의 현재 비중과 목표 비중을 비교해 리밸런싱 기준을 확인합니다.",
+        alt: "장기투자 목표 비중 화면"
+      },
+      {
+        src: "assets/dashboard-income.jpg",
+        eyebrow: "Cashflow",
+        title: "배당·커버드콜 현금흐름",
+        description: "월별 배당금과 옵션 프리미엄, 계좌별 현금흐름을 정리합니다.",
+        alt: "배당 커버드콜 현금흐름 화면"
+      },
+      {
+        src: "assets/dashboard-data-control.jpg",
+        eyebrow: "Data control",
+        title: "CSV 업로드 / 데이터 제어",
+        description: "CSV 업로드, 샘플 데이터, 백업·복원 등 데이터 관리 기능을 제공합니다.",
+        alt: "CSV 업로드와 데이터 제어 화면"
+      }
+    ];
+
     let currentScreenshotIndex=0;
     function updateScreenshotCarousel(nextIndex){const image=document.getElementById("carouselImage");const eyebrow=document.getElementById("carouselEyebrow");const title=document.getElementById("carouselTitle");const description=document.getElementById("carouselDescription");const counter=document.getElementById("carouselCounter");const frame=document.querySelector(".carousel-frame");const modalImage=document.getElementById("screenshotModalImage");const modalTitle=document.getElementById("screenshotModalTitle");const modalDescription=document.getElementById("screenshotModalDescription");if(!image||!dashboardScreenshots.length)return;currentScreenshotIndex=(nextIndex+dashboardScreenshots.length)%dashboardScreenshots.length;const item=dashboardScreenshots[currentScreenshotIndex];frame?.classList.add("is-changing");window.setTimeout(()=>{image.src=item.src;image.alt=item.alt;if(eyebrow)eyebrow.textContent=item.eyebrow;if(title)title.textContent=item.title;if(description)description.textContent=item.description;if(counter)counter.textContent=`${String(currentScreenshotIndex+1).padStart(2,"0")} / ${String(dashboardScreenshots.length).padStart(2,"0")}`;if(modalImage){modalImage.src=item.src;modalImage.alt=item.alt}if(modalTitle)modalTitle.textContent=item.title;if(modalDescription)modalDescription.textContent=item.description;document.querySelectorAll(".carousel-dot").forEach((dot,index)=>{dot.classList.toggle("active",index===currentScreenshotIndex);dot.setAttribute("aria-current",index===currentScreenshotIndex?"true":"false")});frame?.classList.remove("is-changing")},120)}
     function initScreenshotCarousel(){const dots=document.getElementById("carouselDots");const prev=document.querySelector("[data-carousel-prev]");const next=document.querySelector("[data-carousel-next]");const frame=document.querySelector("[data-carousel-open]");const modal=document.getElementById("screenshotModal");if(!dots)return;dots.innerHTML=dashboardScreenshots.map((item,index)=>`<button class="carousel-dot ${index===0?"active":""}" type="button" aria-label="${item.title} 화면 보기" data-carousel-dot="${index}" ${index===0?'aria-current="true"':'aria-current="false"'}></button>`).join("");dots.querySelectorAll("[data-carousel-dot]").forEach(button=>{button.addEventListener("click",()=>updateScreenshotCarousel(Number(button.dataset.carouselDot||0)))});prev?.addEventListener("click",()=>updateScreenshotCarousel(currentScreenshotIndex-1));next?.addEventListener("click",()=>updateScreenshotCarousel(currentScreenshotIndex+1));frame?.addEventListener("click",()=>{modal?.classList.add("is-open");modal?.setAttribute("aria-hidden","false");document.body.style.overflow="hidden"});document.querySelectorAll("[data-screenshot-close]").forEach(button=>{button.addEventListener("click",()=>{modal?.classList.remove("is-open");modal?.setAttribute("aria-hidden","true");document.body.style.overflow=""})});document.addEventListener("keydown",event=>{if(event.key==="Escape"&&modal?.classList.contains("is-open")){modal.classList.remove("is-open");modal.setAttribute("aria-hidden","true");document.body.style.overflow=""}if(event.key==="ArrowLeft")updateScreenshotCarousel(currentScreenshotIndex-1);if(event.key==="ArrowRight")updateScreenshotCarousel(currentScreenshotIndex+1)});let touchStartX=0;let touchEndX=0;frame?.addEventListener("touchstart",event=>{touchStartX=event.changedTouches[0].screenX},{passive:true});frame?.addEventListener("touchend",event=>{touchEndX=event.changedTouches[0].screenX;const delta=touchEndX-touchStartX;if(Math.abs(delta)>46){updateScreenshotCarousel(currentScreenshotIndex+(delta<0?1:-1))}},{passive:true});updateScreenshotCarousel(0)}
@@ -2337,10 +2400,10 @@ h3 {
     <div class="screenshot-modal-backdrop" data-screenshot-close></div>
     <section class="screenshot-modal-panel" role="dialog" aria-modal="true" aria-label="대시보드 스크린샷 크게 보기">
       <button class="screenshot-modal-close" type="button" aria-label="닫기" data-screenshot-close>×</button>
-      <img id="screenshotModalImage" src="assets/dashboard-main.svg" alt="대시보드 화면 크게 보기" />
+      <img id="screenshotModalImage" src="assets/dashboard-main.jpg" alt="대시보드 화면 크게 보기" />
       <div class="screenshot-modal-caption">
-        <strong id="screenshotModalTitle">전체 현황</strong>
-        <p id="screenshotModalDescription">3계좌 평가금액, 계좌 비중, 포트폴리오 구성을 한 화면에서 확인합니다.</p>
+        <strong id="screenshotModalTitle">메인 쇼룸</strong>
+        <p id="screenshotModalDescription">3계좌 통합 투자관리 대시보드의 첫 화면과 전체 요약을 보여줍니다.</p>
       </div>
     </section>
   </div>
