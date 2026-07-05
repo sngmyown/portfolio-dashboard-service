@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#020617" />
   <meta name="description" content="스윙, 장기투자, 배당/커버드콜 계좌를 한 화면에서 관리하는 개인투자자용 웹 포트폴리오 대시보드 제작 서비스입니다." />
-  <title>Premium Landing V12 | 개인투자자용 3계좌 통합 대시보드 제작</title>
+  <title>Premium Landing V13 | 실제 대시보드 스크린샷 캐러셀</title>
   <style>
 :root {
   color-scheme: dark;
@@ -1663,239 +1663,39 @@ h3 {
   }
 }
 
-
-/* Premium Landing V12: image-like dynamic 3D SVG pie chart */
-.dynamic-chart-stage {
-  min-height: 660px !important;
-  padding: 0 !important;
-  border-radius: 2.4rem !important;
-  background:
-    radial-gradient(circle at 48% 54%, rgba(37, 99, 235, 0.18), transparent 28rem),
-    linear-gradient(180deg, rgba(10, 16, 32, 0.92), rgba(3, 7, 18, 0.96)) !important;
-  overflow: hidden !important;
-}
-
-.dynamic-chart-stage::before {
-  display: none !important;
-}
-
-.premium-pie-dashboard-card {
-  position: relative;
-  display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;
-  min-height: 660px;
-  height: 100%;
-  padding: clamp(1.45rem, 3vw, 2.2rem);
-  border-radius: inherit;
-  background:
-    radial-gradient(circle at 48% 62%, rgba(29, 78, 216, 0.16), transparent 30rem),
-    linear-gradient(180deg, #07142d 0%, #041027 56%, #020817 100%);
-  box-shadow:
-    0 44px 130px rgba(0, 0, 0, 0.64),
-    inset 0 0 0 1px rgba(148, 163, 184, 0.17),
-    inset 0 1px 0 rgba(255,255,255,0.06);
-  overflow: hidden;
-}
-
-.premium-pie-dashboard-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  border: 1px solid rgba(96, 165, 250, 0.20);
-  pointer-events: none;
-}
-
-.premium-pie-card-head {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.premium-pie-card-head p {
-  margin: 0;
-  color: #f8fafc;
-  font-size: clamp(1.28rem, 2vw, 1.75rem);
-  font-weight: 860;
-  letter-spacing: -0.035em;
-}
-
-.premium-pie-card-head span {
-  margin-top: 0.2rem;
-  color: #93c5fd;
-  font-size: 0.78rem;
-  font-weight: 780;
-  letter-spacing: 0.05em;
-}
-
-.premium-pie-chart-wrap {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  min-height: 440px;
-  padding: 0.5rem 0 0.2rem;
-}
-
-.premium-pie-chart-wrap::before {
-  content: "";
-  position: absolute;
-  left: 12%;
-  right: 12%;
-  bottom: 9%;
-  height: 90px;
-  border-radius: 50%;
-  background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.34), rgba(37, 99, 235, 0.12) 40%, transparent 72%);
-  filter: blur(14px);
-  opacity: 0.9;
-}
-
-.premium-dynamic-pie-chart {
-  position: relative;
-  z-index: 2;
-  width: min(620px, 100%);
-  aspect-ratio: 1.34 / 1;
-  display: grid;
-  place-items: center;
-}
-
-.premium-dynamic-pie-chart svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-  filter: saturate(1.2) contrast(1.08);
-}
-
-.real-pie-slice-wall,
-.real-pie-slice-top,
-.real-pie-radial-wall,
-.real-pie-highlight {
-  vector-effect: non-scaling-stroke;
-}
-
-.real-pie-slice-top {
-  filter: saturate(1.13) contrast(1.06);
-}
-
-.real-pie-slice-wall {
-  filter: saturate(1.14) contrast(1.08);
-}
-
-.real-pie-radial-wall {
-  opacity: 0.92;
-}
-
-.premium-pie-summary {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(150px, 0.95fr);
-  gap: 0.85rem;
-  padding-top: 1.05rem;
-  border-top: 1px solid rgba(148, 163, 184, 0.16);
-}
-
-.pie-summary-item,
-.pie-total-box {
-  min-width: 0;
-}
-
-.pie-summary-item {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  column-gap: 0.55rem;
-  row-gap: 0.15rem;
-  align-items: center;
-}
-
-.pie-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-
-.item-income .pie-dot { background: #ff8a00; }
-.item-swing .pie-dot { background: #00a3ff; }
-.item-long .pie-dot { background: #7c3aed; }
-
-.pie-summary-item small,
-.pie-total-box small {
-  color: #94a3b8;
-  font-size: 0.78rem;
-  font-weight: 760;
-}
-
-.pie-summary-item strong {
-  grid-column: 2;
-  font-size: clamp(1rem, 1.5vw, 1.28rem);
-  font-weight: 860;
-  letter-spacing: -0.03em;
-}
-
-.item-income strong { color: #ff9f2f; }
-.item-swing strong { color: #38bdf8; }
-.item-long strong { color: #a78bfa; }
-
-.pie-total-box {
-  text-align: right;
-}
-
-.pie-total-box strong {
-  display: block;
-  margin-top: 0.25rem;
-  color: #f8fafc;
-  font-size: clamp(1rem, 1.45vw, 1.2rem);
-  font-weight: 840;
-  letter-spacing: -0.035em;
-}
-
-@media (max-width: 1100px) {
-  .dynamic-chart-stage,
-  .premium-pie-dashboard-card {
-    min-height: auto !important;
-  }
-
-  .premium-pie-chart-wrap {
-    min-height: 400px;
-  }
-
-  .premium-pie-summary {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .pie-total-box {
-    text-align: left;
-  }
-}
-
-@media (max-width: 660px) {
-  .premium-pie-dashboard-card {
-    padding: 1.1rem;
-    border-radius: 1.35rem;
-  }
-
-  .premium-pie-card-head {
-    display: grid;
-  }
-
-  .premium-pie-chart-wrap {
-    min-height: 310px;
-    padding-top: 0.5rem;
-  }
-
-  .premium-dynamic-pie-chart {
-    width: 112%;
-    margin-left: -6%;
-  }
-
-  .premium-pie-summary {
-    grid-template-columns: 1fr;
-  }
-}
+/* Premium Landing V13: real dashboard screenshot carousel */
+.screenshot-carousel-stage{min-height:680px!important;padding:0!important;border-radius:2.4rem!important;background:radial-gradient(circle at 44% 30%,rgba(37,99,235,.24),transparent 26rem),radial-gradient(circle at 82% 8%,rgba(249,115,22,.12),transparent 20rem),linear-gradient(180deg,rgba(10,16,32,.94),rgba(3,7,18,.98))!important;overflow:hidden!important}
+.screenshot-carousel-stage::before{display:none!important}
+.dashboard-carousel{position:relative;display:grid;grid-template-rows:auto minmax(0,1fr) auto;min-height:680px;height:100%;padding:clamp(1.1rem,2vw,1.45rem);border-radius:inherit;background:linear-gradient(180deg,rgba(15,23,42,.68),rgba(2,6,23,.88)),radial-gradient(circle at 50% 54%,rgba(59,130,246,.16),transparent 32rem);box-shadow:0 44px 130px rgba(0,0,0,.66),inset 0 0 0 1px rgba(148,163,184,.17),inset 0 1px 0 rgba(255,255,255,.07);isolation:isolate}
+.carousel-topline{position:relative;z-index:4;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.2rem .35rem 1rem}
+.carousel-topline span{color:#93c5fd;font-size:.74rem;font-weight:850;letter-spacing:.16em}
+.carousel-topline strong{color:#f8fafc;font-size:.78rem;font-weight:850;letter-spacing:.08em}
+.carousel-frame{position:relative;z-index:2;min-height:520px;margin:0;border-radius:2rem;overflow:hidden;background:#020617;border:1px solid rgba(148,163,184,.22);box-shadow:0 34px 90px rgba(0,0,0,.48),inset 0 0 0 1px rgba(255,255,255,.05);cursor:zoom-in}
+.carousel-frame img{display:block;width:100%;height:100%;min-height:520px;object-fit:cover;object-position:center;transform:scale(1.002);transition:opacity 220ms ease,transform 520ms cubic-bezier(.2,.8,.2,1)}
+.carousel-frame.is-changing img{opacity:.28;transform:scale(1.018)}
+.carousel-frame figcaption{position:absolute;left:clamp(1rem,3vw,2rem);right:clamp(1rem,3vw,2rem);bottom:clamp(1rem,3vw,1.65rem);display:grid;gap:.35rem;max-width:560px;padding:clamp(1rem,2vw,1.25rem);border-radius:1.25rem;background:rgba(2,6,23,.72);border:1px solid rgba(148,163,184,.24);backdrop-filter:blur(16px);box-shadow:0 18px 42px rgba(0,0,0,.36)}
+.carousel-frame figcaption span{color:#38bdf8;font-size:.72rem;font-weight:850;letter-spacing:.14em;text-transform:uppercase}
+.carousel-frame figcaption strong{color:#f8fafc;font-size:clamp(1.16rem,2vw,1.48rem);font-weight:860;letter-spacing:-.04em}
+.carousel-frame figcaption p{margin:0;color:#cbd5e1;font-size:.88rem;line-height:1.6}
+.carousel-arrow{position:absolute;z-index:5;top:50%;width:46px;height:58px;transform:translateY(-50%);border:1px solid rgba(148,163,184,.28);border-radius:999px;color:#f8fafc;background:rgba(2,6,23,.58);box-shadow:0 16px 40px rgba(0,0,0,.34);backdrop-filter:blur(14px);font-size:2.2rem;line-height:1;cursor:pointer;transition:transform 160ms ease,background 160ms ease,border-color 160ms ease}
+.carousel-arrow:hover,.carousel-arrow:focus-visible{transform:translateY(-50%) scale(1.04);background:rgba(15,23,42,.82);border-color:rgba(96,165,250,.48)}
+.carousel-arrow-prev{left:clamp(.75rem,2vw,1.25rem)}
+.carousel-arrow-next{right:clamp(.75rem,2vw,1.25rem)}
+.carousel-dots{position:relative;z-index:4;display:flex;justify-content:center;gap:.55rem;padding-top:1.05rem}
+.carousel-dot{width:9px;height:9px;border:0;border-radius:999px;background:rgba(148,163,184,.42);cursor:pointer;transition:width 180ms ease,background 180ms ease,transform 180ms ease}
+.carousel-dot.active{width:34px;background:linear-gradient(90deg,#38bdf8,#7c3aed)}
+.carousel-dot:hover,.carousel-dot:focus-visible{transform:scale(1.12)}
+.screenshot-modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:clamp(1rem,3vw,2rem)}
+.screenshot-modal.is-open{display:flex}
+.screenshot-modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(18px)}
+.screenshot-modal-panel{position:relative;z-index:2;width:min(1180px,96vw);max-height:90vh;border-radius:1.8rem;overflow:hidden;background:#020617;border:1px solid rgba(148,163,184,.28);box-shadow:0 40px 140px rgba(0,0,0,.72)}
+.screenshot-modal-panel img{display:block;width:100%;max-height:72vh;object-fit:contain;background:#020617}
+.screenshot-modal-caption{display:grid;gap:.25rem;padding:1rem 1.2rem 1.15rem;background:rgba(2,6,23,.96);border-top:1px solid rgba(148,163,184,.18)}
+.screenshot-modal-caption strong{color:#f8fafc;font-weight:850}
+.screenshot-modal-caption p{margin:0;color:#cbd5e1;font-size:.9rem;line-height:1.55}
+.screenshot-modal-close{position:absolute;z-index:3;top:.8rem;right:.8rem;width:42px;height:42px;border:1px solid rgba(148,163,184,.3);border-radius:999px;color:#f8fafc;background:rgba(2,6,23,.72);backdrop-filter:blur(12px);font-size:1.45rem;line-height:1;cursor:pointer}
+@media(max-width:1100px){.screenshot-carousel-stage,.dashboard-carousel{min-height:auto!important}.carousel-frame,.carousel-frame img{min-height:460px}}
+@media(max-width:660px){.dashboard-carousel{padding:.8rem;border-radius:1.35rem}.carousel-frame{min-height:430px;border-radius:1.2rem}.carousel-frame img{min-height:430px}.carousel-frame figcaption{left:.8rem;right:.8rem;bottom:.8rem;padding:.85rem}.carousel-arrow{width:38px;height:48px;font-size:1.85rem}.carousel-topline{padding-bottom:.75rem}}
 
   </style>
 </head>
@@ -1925,7 +1725,7 @@ h3 {
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Premium Landing V12 · Dynamic 3D Pie Chart</p>
+        <p class="eyebrow">Premium Landing V13 · Dashboard Screenshot Carousel</p>
         <h1>
           흩어진 계좌를<br />
           하나의 화면으로
@@ -1948,38 +1748,23 @@ h3 {
         </div>
       </div>
 
-      <section class="hero-stage dynamic-chart-stage" aria-label="대시보드 인터페이스 미리보기">
-        <article class="premium-pie-dashboard-card">
-          <div class="premium-pie-card-head">
-            <p>종합 계좌 평가금액 비중</p>
-            <span>실제 입력값 기반 자동 계산</span>
+      <section class="hero-stage screenshot-carousel-stage" aria-label="실제 대시보드 화면 미리보기">
+        <article class="dashboard-carousel" aria-label="실제 대시보드 스크린샷 캐러셀">
+          <div class="carousel-topline">
+            <span>LIVE DASHBOARD PREVIEW</span>
+            <strong id="carouselCounter">01 / 06</strong>
           </div>
-
-          <div class="premium-pie-chart-wrap">
-            <div id="premiumDynamicPieChart" class="premium-dynamic-pie-chart" aria-label="입력값 기반 3D 파이 차트"></div>
-          </div>
-
-          <div class="premium-pie-summary">
-            <div class="pie-summary-item item-income">
-              <span class="pie-dot"></span>
-              <small id="pieLabelIncome">배당·커버드콜</small>
-              <strong id="piePercentIncome">0%</strong>
-            </div>
-            <div class="pie-summary-item item-swing">
-              <span class="pie-dot"></span>
-              <small id="pieLabelSwing">스윙 계좌</small>
-              <strong id="piePercentSwing">0%</strong>
-            </div>
-            <div class="pie-summary-item item-long">
-              <span class="pie-dot"></span>
-              <small id="pieLabelLong">장기투자 계좌</small>
-              <strong id="piePercentLong">0%</strong>
-            </div>
-            <div class="pie-total-box">
-              <small>총 평가금액</small>
-              <strong id="pieTotalValue">₩0</strong>
-            </div>
-          </div>
+          <button class="carousel-arrow carousel-arrow-prev" type="button" aria-label="이전 대시보드 화면 보기" data-carousel-prev>‹</button>
+          <figure class="carousel-frame" data-carousel-open>
+            <img id="carouselImage" src="assets/dashboard-main.svg" alt="전체 현황 대시보드 화면" loading="eager" />
+            <figcaption>
+              <span id="carouselEyebrow">Overview</span>
+              <strong id="carouselTitle">전체 현황</strong>
+              <p id="carouselDescription">3계좌 평가금액, 계좌 비중, 포트폴리오 구성을 한 화면에서 확인합니다.</p>
+            </figcaption>
+          </figure>
+          <button class="carousel-arrow carousel-arrow-next" type="button" aria-label="다음 대시보드 화면 보기" data-carousel-next>›</button>
+          <div class="carousel-dots" id="carouselDots" aria-label="대시보드 화면 선택"></div>
         </article>
       </section>
     </section>
@@ -2541,248 +2326,24 @@ h3 {
     });
 
     renderRaisedPie(modalPie, "long", true);
-
-    /*
-      V12 dynamic pie data
-      이 값만 바꾸면 파이 조각 크기, 퍼센트, 총 평가금액이 자동으로 다시 계산됩니다.
-      value에는 실제 평가금액을 넣으면 됩니다.
-    */
-    const premiumPieChartData = [
-      {
-        key: "income",
-        label: "배당·커버드콜",
-        value: 30816000,
-        topStart: "#FFB74D",
-        topEnd: "#FF7A00",
-        sideStart: "#EA580C",
-        sideEnd: "#7C2D12"
-      },
-      {
-        key: "swing",
-        label: "스윙 계좌",
-        value: 30816000,
-        topStart: "#67E8F9",
-        topEnd: "#0094FF",
-        sideStart: "#0078E8",
-        sideEnd: "#003C7A"
-      },
-      {
-        key: "long",
-        label: "장기투자 계좌",
-        value: 66768000,
-        topStart: "#A78BFA",
-        topEnd: "#6D28D9",
-        sideStart: "#5B21B6",
-        sideEnd: "#2E1065"
-      }
-    ];
-
-    function formatKRW(value) {
-      return new Intl.NumberFormat("ko-KR", {
-        style: "currency",
-        currency: "KRW",
-        maximumFractionDigits: 0
-      }).format(Math.round(value));
-    }
-
-    function piePoint(cx, cy, rx, ry, angle) {
-      const rad = (angle * Math.PI) / 180;
-      return {
-        x: cx + rx * Math.cos(rad),
-        y: cy + ry * Math.sin(rad)
-      };
-    }
-
-    function pieWedgePath(cx, cy, rx, ry, start, end) {
-      const p1 = piePoint(cx, cy, rx, ry, start);
-      const p2 = piePoint(cx, cy, rx, ry, end);
-      const largeArc = Math.abs(end - start) > 180 ? 1 : 0;
-
-      return [
-        `M ${cx.toFixed(2)} ${cy.toFixed(2)}`,
-        `L ${p1.x.toFixed(2)} ${p1.y.toFixed(2)}`,
-        `A ${rx} ${ry} 0 ${largeArc} 1 ${p2.x.toFixed(2)} ${p2.y.toFixed(2)}`,
-        "Z"
-      ].join(" ");
-    }
-
-    function pieOuterWallPath(cx, cy, rx, ry, start, end, depth) {
-      const p1Top = piePoint(cx, cy, rx, ry, start);
-      const p2Top = piePoint(cx, cy, rx, ry, end);
-      const p1Bottom = piePoint(cx, cy + depth, rx, ry, start);
-      const p2Bottom = piePoint(cx, cy + depth, rx, ry, end);
-      const largeArc = Math.abs(end - start) > 180 ? 1 : 0;
-
-      return [
-        `M ${p1Top.x.toFixed(2)} ${p1Top.y.toFixed(2)}`,
-        `A ${rx} ${ry} 0 ${largeArc} 1 ${p2Top.x.toFixed(2)} ${p2Top.y.toFixed(2)}`,
-        `L ${p2Bottom.x.toFixed(2)} ${p2Bottom.y.toFixed(2)}`,
-        `A ${rx} ${ry} 0 ${largeArc} 0 ${p1Bottom.x.toFixed(2)} ${p1Bottom.y.toFixed(2)}`,
-        "Z"
-      ].join(" ");
-    }
-
-    function pieRadialWallPath(cx, cy, rx, ry, angle, depth) {
-      const outerTop = piePoint(cx, cy, rx, ry, angle);
-      const outerBottom = piePoint(cx, cy + depth, rx, ry, angle);
-
-      return [
-        `M ${cx.toFixed(2)} ${cy.toFixed(2)}`,
-        `L ${outerTop.x.toFixed(2)} ${outerTop.y.toFixed(2)}`,
-        `L ${outerBottom.x.toFixed(2)} ${outerBottom.y.toFixed(2)}`,
-        `L ${cx.toFixed(2)} ${(cy + depth).toFixed(2)}`,
-        "Z"
-      ].join(" ");
-    }
-
-    function renderPremiumDynamicPie(data = premiumPieChartData) {
-      const target = document.getElementById("premiumDynamicPieChart");
-      if (!target) return;
-
-      const safeData = data
-        .map((item) => ({ ...item, value: Math.max(0, Number(item.value) || 0) }))
-        .filter((item) => item.value > 0);
-
-      const total = safeData.reduce((sum, item) => sum + item.value, 0);
-      if (!total) return;
-
-      const cx = 260;
-      const cy = 142;
-      const rx = 172;
-      const ry = 88;
-      const depth = 72;
-      const explode = 16;
-      let cursor = 205;
-
-      const defs = [];
-      const walls = [];
-      const radialWalls = [];
-      const tops = [];
-      const gloss = [];
-
-      safeData.forEach((item, index) => {
-        const percent = item.value / total;
-        const sweep = percent * 360;
-        const start = cursor;
-        const end = cursor + sweep;
-        const mid = start + sweep / 2;
-        const offsetX = Math.cos((mid * Math.PI) / 180) * explode;
-        const offsetY = Math.sin((mid * Math.PI) / 180) * explode * 0.62;
-
-        defs.push(`
-          <linearGradient id="top-${item.key}" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="${item.topStart}"/>
-            <stop offset="100%" stop-color="${item.topEnd}"/>
-          </linearGradient>
-          <linearGradient id="side-${item.key}" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="${item.sideStart}"/>
-            <stop offset="100%" stop-color="${item.sideEnd}"/>
-          </linearGradient>
-        `);
-
-        const transform = `translate(${offsetX.toFixed(2)} ${offsetY.toFixed(2)})`;
-
-        walls.push(`
-          <path
-            class="real-pie-slice-wall real-pie-${item.key}"
-            d="${pieOuterWallPath(cx, cy, rx, ry, start, end, depth)}"
-            fill="url(#side-${item.key})"
-            stroke="rgba(255,255,255,0.14)"
-            stroke-width="1.1"
-            transform="${transform}"
-          />
-        `);
-
-        radialWalls.push(`
-          <path
-            class="real-pie-radial-wall"
-            d="${pieRadialWallPath(cx, cy, rx, ry, start, depth)}"
-            fill="url(#side-${item.key})"
-            opacity="0.88"
-            transform="${transform}"
-          />
-        `);
-
-        tops.push(`
-          <path
-            class="real-pie-slice-top real-pie-${item.key}"
-            d="${pieWedgePath(cx, cy, rx, ry, start, end)}"
-            fill="url(#top-${item.key})"
-            stroke="rgba(255,255,255,0.42)"
-            stroke-width="1.45"
-            transform="${transform}"
-          />
-        `);
-
-        const highlightPoint = piePoint(cx, cy, rx * 0.58, ry * 0.48, mid);
-        gloss.push(`
-          <ellipse
-            class="real-pie-highlight"
-            cx="${highlightPoint.x.toFixed(2)}"
-            cy="${highlightPoint.y.toFixed(2)}"
-            rx="${Math.max(20, 34 * percent + 20).toFixed(2)}"
-            ry="${Math.max(8, 16 * percent + 8).toFixed(2)}"
-            fill="rgba(255,255,255,0.16)"
-            transform="${transform} rotate(-10 ${highlightPoint.x.toFixed(2)} ${highlightPoint.y.toFixed(2)})"
-          />
-        `);
-
-        cursor = end;
-      });
-
-      target.innerHTML = `
-        <svg viewBox="0 0 520 360" role="img" aria-label="입력값에 따라 조각 크기가 바뀌는 고급형 3D 파이 차트">
-          <defs>
-            ${defs.join("")}
-            <radialGradient id="pieShadow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="rgba(37,99,235,0.38)"/>
-              <stop offset="42%" stop-color="rgba(37,99,235,0.16)"/>
-              <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
-            </radialGradient>
-            <filter id="realPieShadow" x="-24%" y="-26%" width="148%" height="178%">
-              <feDropShadow dx="0" dy="30" stdDeviation="18" flood-color="#000000" flood-opacity="0.62"/>
-            </filter>
-          </defs>
-
-          <ellipse cx="260" cy="292" rx="210" ry="48" fill="url(#pieShadow)"/>
-          <g transform="rotate(-8 260 190)" filter="url(#realPieShadow)">
-            ${walls.join("")}
-            ${radialWalls.join("")}
-            ${tops.join("")}
-            ${gloss.join("")}
-          </g>
-        </svg>
-      `;
-
-      const percentByKey = Object.fromEntries(
-        safeData.map((item) => [item.key, `${((item.value / total) * 100).toFixed(1)}%`])
-      );
-
-      const labelByKey = Object.fromEntries(safeData.map((item) => [item.key, item.label]));
-
-      const percentIncome = document.getElementById("piePercentIncome");
-      const percentSwing = document.getElementById("piePercentSwing");
-      const percentLong = document.getElementById("piePercentLong");
-      const labelIncome = document.getElementById("pieLabelIncome");
-      const labelSwing = document.getElementById("pieLabelSwing");
-      const labelLong = document.getElementById("pieLabelLong");
-      const totalValue = document.getElementById("pieTotalValue");
-
-      if (percentIncome) percentIncome.textContent = percentByKey.income || "0%";
-      if (percentSwing) percentSwing.textContent = percentByKey.swing || "0%";
-      if (percentLong) percentLong.textContent = percentByKey.long || "0%";
-      if (labelIncome) labelIncome.textContent = labelByKey.income || "배당·커버드콜";
-      if (labelSwing) labelSwing.textContent = labelByKey.swing || "스윙 계좌";
-      if (labelLong) labelLong.textContent = labelByKey.long || "장기투자 계좌";
-      if (totalValue) totalValue.textContent = formatKRW(total);
-    }
-
-    window.updatePremiumDynamicPie = function(nextData) {
-      renderPremiumDynamicPie(nextData);
-    };
-
-    renderPremiumDynamicPie(premiumPieChartData);
+    const dashboardScreenshots=[{src:"assets/dashboard-main.svg",eyebrow:"Overview",title:"전체 현황",description:"3계좌 평가금액, 계좌 비중, 포트폴리오 구성을 한 화면에서 확인합니다.",alt:"전체 현황 대시보드 화면"},{src:"assets/dashboard-accounts.svg",eyebrow:"Accounts",title:"계좌 및 비중",description:"스윙, 장기투자, 배당주 투자 계좌별 보유 종목과 비중을 분리해서 확인합니다.",alt:"계좌 및 비중 대시보드 화면"},{src:"assets/dashboard-timeline.svg",eyebrow:"Timeline",title:"거래 타임라인",description:"분할매수, 분할매도, 적립식 매수, 추가 납입 기록을 시간순으로 정리합니다.",alt:"거래 타임라인 대시보드 화면"},{src:"assets/dashboard-targets.svg",eyebrow:"Long-term",title:"장기투자 목표 비중",description:"목표 비중과 현재 비중을 비교해 장기투자 계좌의 리밸런싱 기준을 확인합니다.",alt:"장기투자 목표 비중 대시보드 화면"},{src:"assets/dashboard-income.svg",eyebrow:"Cashflow",title:"배당·커버드콜 현금흐름",description:"월별 배당금, 커버드콜 프리미엄, 현금흐름 기록을 한 화면에서 관리합니다.",alt:"배당 커버드콜 현금흐름 대시보드 화면"},{src:"assets/dashboard-privacy.svg",eyebrow:"Privacy",title:"백업·복원 / 프라이버시",description:"브라우저 로컬 저장, JSON 백업·복원, 프라이버시 모드로 민감 정보를 관리합니다.",alt:"백업 복원 프라이버시 대시보드 화면"}];
+    let currentScreenshotIndex=0;
+    function updateScreenshotCarousel(nextIndex){const image=document.getElementById("carouselImage");const eyebrow=document.getElementById("carouselEyebrow");const title=document.getElementById("carouselTitle");const description=document.getElementById("carouselDescription");const counter=document.getElementById("carouselCounter");const frame=document.querySelector(".carousel-frame");const modalImage=document.getElementById("screenshotModalImage");const modalTitle=document.getElementById("screenshotModalTitle");const modalDescription=document.getElementById("screenshotModalDescription");if(!image||!dashboardScreenshots.length)return;currentScreenshotIndex=(nextIndex+dashboardScreenshots.length)%dashboardScreenshots.length;const item=dashboardScreenshots[currentScreenshotIndex];frame?.classList.add("is-changing");window.setTimeout(()=>{image.src=item.src;image.alt=item.alt;if(eyebrow)eyebrow.textContent=item.eyebrow;if(title)title.textContent=item.title;if(description)description.textContent=item.description;if(counter)counter.textContent=`${String(currentScreenshotIndex+1).padStart(2,"0")} / ${String(dashboardScreenshots.length).padStart(2,"0")}`;if(modalImage){modalImage.src=item.src;modalImage.alt=item.alt}if(modalTitle)modalTitle.textContent=item.title;if(modalDescription)modalDescription.textContent=item.description;document.querySelectorAll(".carousel-dot").forEach((dot,index)=>{dot.classList.toggle("active",index===currentScreenshotIndex);dot.setAttribute("aria-current",index===currentScreenshotIndex?"true":"false")});frame?.classList.remove("is-changing")},120)}
+    function initScreenshotCarousel(){const dots=document.getElementById("carouselDots");const prev=document.querySelector("[data-carousel-prev]");const next=document.querySelector("[data-carousel-next]");const frame=document.querySelector("[data-carousel-open]");const modal=document.getElementById("screenshotModal");if(!dots)return;dots.innerHTML=dashboardScreenshots.map((item,index)=>`<button class="carousel-dot ${index===0?"active":""}" type="button" aria-label="${item.title} 화면 보기" data-carousel-dot="${index}" ${index===0?'aria-current="true"':'aria-current="false"'}></button>`).join("");dots.querySelectorAll("[data-carousel-dot]").forEach(button=>{button.addEventListener("click",()=>updateScreenshotCarousel(Number(button.dataset.carouselDot||0)))});prev?.addEventListener("click",()=>updateScreenshotCarousel(currentScreenshotIndex-1));next?.addEventListener("click",()=>updateScreenshotCarousel(currentScreenshotIndex+1));frame?.addEventListener("click",()=>{modal?.classList.add("is-open");modal?.setAttribute("aria-hidden","false");document.body.style.overflow="hidden"});document.querySelectorAll("[data-screenshot-close]").forEach(button=>{button.addEventListener("click",()=>{modal?.classList.remove("is-open");modal?.setAttribute("aria-hidden","true");document.body.style.overflow=""})});document.addEventListener("keydown",event=>{if(event.key==="Escape"&&modal?.classList.contains("is-open")){modal.classList.remove("is-open");modal.setAttribute("aria-hidden","true");document.body.style.overflow=""}if(event.key==="ArrowLeft")updateScreenshotCarousel(currentScreenshotIndex-1);if(event.key==="ArrowRight")updateScreenshotCarousel(currentScreenshotIndex+1)});let touchStartX=0;let touchEndX=0;frame?.addEventListener("touchstart",event=>{touchStartX=event.changedTouches[0].screenX},{passive:true});frame?.addEventListener("touchend",event=>{touchEndX=event.changedTouches[0].screenX;const delta=touchEndX-touchStartX;if(Math.abs(delta)>46){updateScreenshotCarousel(currentScreenshotIndex+(delta<0?1:-1))}},{passive:true});updateScreenshotCarousel(0)}
+    initScreenshotCarousel();
 
   </script>
+  <div class="screenshot-modal" id="screenshotModal" aria-hidden="true">
+    <div class="screenshot-modal-backdrop" data-screenshot-close></div>
+    <section class="screenshot-modal-panel" role="dialog" aria-modal="true" aria-label="대시보드 스크린샷 크게 보기">
+      <button class="screenshot-modal-close" type="button" aria-label="닫기" data-screenshot-close>×</button>
+      <img id="screenshotModalImage" src="assets/dashboard-main.svg" alt="대시보드 화면 크게 보기" />
+      <div class="screenshot-modal-caption">
+        <strong id="screenshotModalTitle">전체 현황</strong>
+        <p id="screenshotModalDescription">3계좌 평가금액, 계좌 비중, 포트폴리오 구성을 한 화면에서 확인합니다.</p>
+      </div>
+    </section>
+  </div>
+
 </body>
 </html>
