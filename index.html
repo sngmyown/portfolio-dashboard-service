@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#020617" />
+  <meta name="description" content="스윙, 장기투자, 배당/커버드콜 계좌를 한 화면에서 관리하는 개인투자자용 웹 포트폴리오 대시보드 제작 서비스입니다." />
+  <title>개인투자자용 3계좌 통합 포트폴리오 대시보드 제작</title>
+  <link rel="stylesheet" href="./styles.css?v=sales-landing-v1" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="상단으로 이동">
+      <span>3A</span>
+      <strong>Portfolio Dashboard Studio</strong>
+    </a>
+
+    <nav class="desktop-nav" aria-label="판매 페이지 메뉴">
+      <a href="#problem">문제</a>
+      <a href="#features">기능</a>
+      <a href="#packages">패키지</a>
+      <a href="#process">진행 방식</a>
+      <a href="#privacy">프라이버시</a>
+      <a href="#contact" class="nav-cta">문의하기</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">개인투자자용 웹 대시보드 제작</p>
+        <h1>흩어진 투자 계좌를<br />한 화면에서 관리하세요</h1>
+        <p class="lead">
+          스윙매매, 장기투자, 배당주/커버드콜 계좌를 분리해서 관리하고,
+          종합 평가금액, 전체 수익률, 계좌별 비중, 환율 적용 평가금액,
+          매매 복기, 배당 현금흐름까지 한 화면에서 확인할 수 있는
+          개인투자자용 웹 포트폴리오 대시보드를 제작합니다.
+        </p>
+
+        <div class="hero-actions">
+          <a class="primary" href="#contact">제작 문의하기</a>
+          <a class="secondary" href="#features">기능 먼저 보기</a>
+          <a class="ghost" href="#demo">데모 안내 보기</a>
+        </div>
+
+        <div class="hero-notice">
+          <strong>중요</strong>
+          <span>본 서비스는 투자 자문, 종목 추천, 매수·매도 신호, 수익률 보장 서비스가 아닙니다. 고객이 직접 입력한 투자 데이터를 정리하고 시각화하는 웹 대시보드 제작 서비스입니다.</span>
+        </div>
+      </div>
+
+      <aside class="dashboard-preview" aria-label="대시보드 미리보기">
+        <div class="preview-top">
+          <div>
+            <span>종합 계좌 평가금액</span>
+            <strong>₩128,400,000</strong>
+          </div>
+          <b class="return-badge positive">+18.7%</b>
+        </div>
+
+        <div class="preview-chart-wrap">
+          <div class="pie-3d" aria-hidden="true"></div>
+        </div>
+
+        <div class="preview-accounts">
+          <div>
+            <span><i class="dot blue"></i>스윙 계좌</span>
+            <strong>24%</strong>
+          </div>
+          <div>
+            <span><i class="dot purple"></i>장기투자 계좌</span>
+            <strong>52%</strong>
+          </div>
+          <div>
+            <span><i class="dot amber"></i>배당·커버드콜</span>
+            <strong>24%</strong>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="problem" class="section problem-section">
+      <div class="section-head">
+        <p class="section-kicker">Problem</p>
+        <h2>계좌가 늘어날수록 투자 데이터는 흩어집니다</h2>
+        <p>
+          증권사 화면은 매매에는 편하지만, 개인의 전체 투자 구조를 장기적으로 정리하기에는 부족한 경우가 많습니다.
+        </p>
+      </div>
+
+      <div class="problem-grid">
+        <article>
+          <span>01</span>
+          <h3>전체 평가금액 파악이 어렵습니다</h3>
+          <p>여러 증권 계좌에 나뉜 원화·달러 자산을 한 화면에서 보기 어렵습니다.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>투자 유형별 관리가 섞입니다</h3>
+          <p>스윙, 장기투자, 배당/커버드콜 기록이 같은 화면에 섞이면 판단이 흐려집니다.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>복기와 현금흐름이 따로 놉니다</h3>
+          <p>매매 복기, 배당금, 옵션 프리미엄 기록이 엑셀과 메모장에 흩어집니다.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>백업과 복원 체계가 없습니다</h3>
+          <p>브라우저나 엑셀 파일이 바뀔 때 데이터를 어떻게 보관할지 불안정합니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="features" class="section features-section">
+      <div class="section-head">
+        <p class="section-kicker">Features</p>
+        <h2>제작 가능한 핵심 기능</h2>
+        <p>실제 고객의 투자 스타일에 맞춰 필요한 기능을 선택적으로 구성할 수 있습니다.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article>
+          <h3>3계좌 통합 구조</h3>
+          <p>스윙, 장기투자, 배당주/커버드콜 계좌를 분리하고 전체 화면에서는 통합해서 보여줍니다.</p>
+        </article>
+        <article>
+          <h3>전체 수익률 표시</h3>
+          <p>종합 계좌 평가금액 옆에 전체 수익률을 표시하고, 수익권은 초록색, 손실권은 빨간색으로 구분합니다.</p>
+        </article>
+        <article>
+          <h3>보유 종목 관리</h3>
+          <p>보유 종목 추가, 수정, 삭제와 원금·평가금액·평가손익·수익률 표시를 지원합니다.</p>
+        </article>
+        <article>
+          <h3>환율 적용</h3>
+          <p>USD 자산은 달러로 입력하고, 설정한 USD/KRW 환율을 적용해 원화 평가금액으로 계산합니다.</p>
+        </article>
+        <article>
+          <h3>분할 매수·매도 기록</h3>
+          <p>날짜별 분할 매수, 분할 매도, 적립식 매수, 추가 납입 기록을 관리할 수 있습니다.</p>
+        </article>
+        <article>
+          <h3>스윙매매 복기</h3>
+          <p>진입일, 청산일, 전략, 손익, 보유 기간, 진입·청산 사유를 정리합니다.</p>
+        </article>
+        <article>
+          <h3>장기투자 목표 비중</h3>
+          <p>자산군별 목표 비중을 설정하고 현재 비중과 비교할 수 있습니다.</p>
+        </article>
+        <article>
+          <h3>배당·커버드콜 현금흐름</h3>
+          <p>월별 배당금, 옵션 프리미엄, 세전·세금·세후 현금흐름을 관리합니다.</p>
+        </article>
+        <article>
+          <h3>CSV 업로드</h3>
+          <p>보유 종목, 매매 복기, 현금흐름 데이터를 CSV로 업로드할 수 있습니다.</p>
+        </article>
+        <article>
+          <h3>백업/복원</h3>
+          <p>고객이 직접 백업 파일을 저장하고 필요할 때 다시 복원할 수 있습니다.</p>
+        </article>
+        <article>
+          <h3>프라이버시 모드</h3>
+          <p>화면 공유나 문의 상황에서 금액과 종목명을 일부 마스킹할 수 있습니다.</p>
+        </article>
+        <article>
+          <h3>최종 점검 화면</h3>
+          <p>보유 종목, 목표 비중, 스윙 기록, 현금흐름, 백업 상태를 체크리스트로 확인합니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="demo" class="section demo-section">
+      <div class="demo-card">
+        <div>
+          <p class="section-kicker">Demo</p>
+          <h2>샘플 대시보드로 먼저 확인할 수 있습니다</h2>
+          <p>
+            실제 고객 데이터가 아닌 샘플 데이터 기반 대시보드로 기능과 화면 구성을 확인할 수 있습니다.
+            플랫폼 정책상 외부 링크 전달이 제한될 수 있으므로, 상담 시 안내 방식은 채널에 맞춰 조정합니다.
+          </p>
+        </div>
+        <div class="demo-actions">
+          <a class="primary" href="#" aria-label="데모 링크 자리">데모 링크 자리</a>
+          <small>실제 등록 전, 이 버튼의 href를 데모 대시보드 주소로 변경하세요.</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages" class="section packages-section">
+      <div class="section-head">
+        <p class="section-kicker">Packages</p>
+        <h2>작업 범위별 패키지</h2>
+        <p>아래 가격은 시작 기준입니다. 실제 작업 범위, 맞춤 수정 수준, 납품 방식에 따라 조정될 수 있습니다.</p>
+      </div>
+
+      <div class="package-grid">
+        <article>
+          <div class="package-title">
+            <h3>Basic</h3>
+            <strong>190,000원부터</strong>
+          </div>
+          <ul>
+            <li>3계좌 기본 대시보드</li>
+            <li>보유 종목 관리</li>
+            <li>계좌별 평가금액 및 비중</li>
+            <li>기본 차트</li>
+            <li>백업 / 복원</li>
+            <li>프라이버시 및 면책 화면</li>
+          </ul>
+        </article>
+
+        <article class="featured">
+          <div class="package-label">추천</div>
+          <div class="package-title">
+            <h3>Standard</h3>
+            <strong>490,000원부터</strong>
+          </div>
+          <ul>
+            <li>Basic 포함</li>
+            <li>스윙매매 복기 관리</li>
+            <li>장기투자 목표 비중 관리</li>
+            <li>배당 / 커버드콜 현금흐름</li>
+            <li>환율 설정</li>
+            <li>분할 매수 / 매도 기록</li>
+            <li>고객 입력 가이드</li>
+          </ul>
+        </article>
+
+        <article>
+          <div class="package-title">
+            <h3>Premium</h3>
+            <strong>990,000원부터</strong>
+          </div>
+          <ul>
+            <li>Standard 포함</li>
+            <li>고객 맞춤 화면 구성</li>
+            <li>계좌명 / 자산군 / 문구 수정</li>
+            <li>색상 및 화면 구성 조정</li>
+            <li>고급 시각화 추가</li>
+            <li>납품 전 체크리스트</li>
+            <li>백업 / 복원 테스트 안내</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="private-package">
+        <h3>Private Deploy</h3>
+        <p>비공개 사용 구조, 고객 전용 배포, 납품 폴더 정리, 초기 수정 지원이 필요한 경우 별도 견적 기준으로 진행합니다.</p>
+        <strong>1,500,000원부터</strong>
+      </div>
+    </section>
+
+    <section id="process" class="section process-section">
+      <div class="section-head">
+        <p class="section-kicker">Process</p>
+        <h2>작업 진행 방식</h2>
+      </div>
+
+      <ol class="process-list">
+        <li>
+          <span>01</span>
+          <div>
+            <h3>요구사항 확인</h3>
+            <p>계좌 수, 투자 유형, 원화/달러 자산 여부, 필요한 입력 항목을 확인합니다.</p>
+          </div>
+        </li>
+        <li>
+          <span>02</span>
+          <div>
+            <h3>화면 구성 확정</h3>
+            <p>샘플 화면을 기준으로 필요한 수정 사항과 작업 범위를 정리합니다.</p>
+          </div>
+        </li>
+        <li>
+          <span>03</span>
+          <div>
+            <h3>대시보드 제작</h3>
+            <p>기능, 문구, 설정값, 화면 구성을 고객 목적에 맞게 반영합니다.</p>
+          </div>
+        </li>
+        <li>
+          <span>04</span>
+          <div>
+            <h3>검수 및 수정</h3>
+            <p>데이터 입력, 차트 반영, 백업/복원, 프라이버시 모드 등을 확인합니다.</p>
+          </div>
+        </li>
+        <li>
+          <span>05</span>
+          <div>
+            <h3>최종 납품</h3>
+            <p>코드 파일, 사용 가이드, 백업/복원 안내, 주의사항을 정리해 전달합니다.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="privacy" class="section privacy-section">
+      <div class="privacy-grid">
+        <div>
+          <p class="section-kicker">Privacy</p>
+          <h2>증권사 로그인 정보는 요청하지 않습니다</h2>
+          <p>
+            이 대시보드는 고객이 직접 입력하거나 업로드한 데이터를 기반으로 작동합니다.
+            기본 구조는 브라우저 내부 저장소를 사용하며, 고객은 직접 백업 파일을 저장하고 복원할 수 있습니다.
+          </p>
+        </div>
+        <div class="privacy-list">
+          <div>증권사 계정 요청 없음</div>
+          <div>증권사 비밀번호 요청 없음</div>
+          <div>증권사 API 키 요청 없음</div>
+          <div>고객 직접 입력 데이터 기반</div>
+          <div>백업 파일 고객 직접 보관</div>
+        </div>
+      </div>
+
+      <div class="warning-box">
+        <strong>주의</strong>
+        <p>
+          운용자에게 사용자의 화면 캡처, 백업 파일, CSV 파일을 직접 전달하는 경우 해당 내용은 운용자가 볼 수 있습니다.
+          이 부분을 참고하여 운용자에게 수정 사항 또는 추가 요구 사항을 요청해주시길 바랍니다.
+        </p>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq-section">
+      <div class="section-head">
+        <p class="section-kicker">FAQ</p>
+        <h2>자주 묻는 질문</h2>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>증권사 계정 정보를 입력해야 하나요?</summary>
+          <p>아닙니다. 증권사 로그인 정보, 비밀번호, API 키를 요청하지 않습니다.</p>
+        </details>
+        <details>
+          <summary>데이터는 어디에 저장되나요?</summary>
+          <p>기본 구조는 브라우저 내부 저장소를 사용합니다. 고객은 직접 백업 파일을 저장하고 필요할 때 복원할 수 있습니다.</p>
+        </details>
+        <details>
+          <summary>투자 조언도 포함되나요?</summary>
+          <p>아닙니다. 본 서비스는 투자 데이터 정리 및 시각화 대시보드 제작 서비스입니다.</p>
+        </details>
+        <details>
+          <summary>나중에 종목이나 기록을 직접 수정할 수 있나요?</summary>
+          <p>가능합니다. 보유 종목, 스윙 기록, 배당/커버드콜 기록, 장기투자 목표 비중은 직접 추가/수정/삭제할 수 있습니다.</p>
+        </details>
+        <details>
+          <summary>모바일에서도 사용할 수 있나요?</summary>
+          <p>반응형 화면을 지원하지만, 표와 입력 항목이 많기 때문에 PC 또는 태블릿 사용을 권장합니다.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="contact-card">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2>제작 문의 전 아래 내용을 준비해주세요</h2>
+          <p>상담 시 아래 내용을 알려주시면 작업 범위를 빠르게 확인할 수 있습니다.</p>
+        </div>
+
+        <ul class="contact-list">
+          <li>관리할 계좌 수</li>
+          <li>투자 유형: 스윙 / 장기투자 / 배당 / 커버드콜</li>
+          <li>원화·달러 자산 여부</li>
+          <li>필요한 기록 항목</li>
+          <li>기존 엑셀 또는 CSV 보유 여부</li>
+          <li>원하는 납품 방식</li>
+        </ul>
+
+        <div class="contact-actions">
+          <a class="primary" href="mailto:sangtheheon1029@gmail.com">이메일 문의하기</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>본 서비스는 투자 자문, 종목 추천, 수익률 보장을 제공하지 않습니다. 투자 판단과 그 결과에 대한 책임은 고객 본인에게 있습니다.</p>
+  </footer>
+</body>
+</html>
