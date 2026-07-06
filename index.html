@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#020617" />
-  <meta name="description" content="스윙, 장기투자, 배당/커버드콜 계좌를 한 화면에서 관리하는 개인투자자용 웹 포트폴리오 대시보드 제작 서비스입니다." />
-  <title>Premium Landing V14 | 실제 3A 대시보드 스크린샷 캐러셀</title>
+  <meta name="description" content="흩어진 투자 계좌를 하나의 화면으로 정리하는 개인 투자자용 3A Portfolio Studio 웹 대시보드 제작 서비스입니다." />
+  <title>Premium Landing V15 | 3A Portfolio Studio 런칭가 패키지</title>
   <style>
 :root {
   color-scheme: dark;
@@ -1715,6 +1715,105 @@ h3 {
   object-fit: contain !important;
 }
 
+
+/* Premium Landing V15: pricing and CTA finalization */
+.package-grid-v15 {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+.launch-note {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: center;
+  margin: -0.35rem 0 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(245, 158, 11, 0.26);
+  border-radius: 1.2rem;
+  background:
+    radial-gradient(circle at 0% 50%, rgba(245, 158, 11, 0.14), transparent 22rem),
+    rgba(15, 23, 42, 0.58);
+}
+
+.launch-note span {
+  color: var(--amber);
+  font-weight: 950;
+  letter-spacing: -0.04em;
+}
+
+.launch-note p {
+  margin: 0;
+  color: #cbd5e1;
+  line-height: 1.65;
+}
+
+.package-summary {
+  min-height: 4.7rem;
+  margin: 0.75rem 0 0;
+  color: #cbd5e1;
+  line-height: 1.58;
+  font-size: 0.92rem;
+}
+
+.package-grid-v15 article {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.package-grid-v15 ul {
+  margin-top: 0.85rem;
+}
+
+.package-grid-v15 strong {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: clamp(1.18rem, 1.55vw, 1.55rem);
+}
+
+.contact-intro {
+  max-width: 780px;
+  margin: -0.35rem 0 1rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.contact-actions-v15 {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem !important;
+}
+
+.contact-actions-v15 small {
+  flex-basis: 100%;
+}
+
+.warning-box + .warning-box {
+  margin-top: 0.85rem;
+}
+
+@media (max-width: 1280px) {
+  .package-grid-v15 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .package-grid-v15,
+  .launch-note {
+    grid-template-columns: 1fr !important;
+  }
+
+  .package-grid-v15 article {
+    min-height: auto;
+  }
+
+  .package-summary {
+    min-height: auto;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -1732,7 +1831,7 @@ h3 {
     </a>
 
     <nav class="desktop-nav" aria-label="판매 페이지 메뉴">
-      <a href="#experience">Experience</a>
+      <a href="#demo">Demo</a>
       <a href="#features">Features</a>
       <a href="#packages">Packages</a>
       <a href="#process">Process</a>
@@ -1743,30 +1842,30 @@ h3 {
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Premium Landing V14 · Real 3A Dashboard Screenshots</p>
+        <p class="eyebrow">Premium Landing V15 · Pricing & CTA Final</p>
         <h1>
           흩어진 계좌를<br />
           하나의 화면으로
         </h1>
         <p class="lead">
-          스윙매매, 장기투자, 배당/커버드콜 계좌를 분리해서 관리하고
-          종합 평가금액, 전체 수익률, 환율 적용 평가금액, 매매 복기,
-          배당 현금흐름까지 한 화면에서 확인하는 개인투자자용 웹 대시보드 제작 서비스입니다.
+          스윙, 장기투자, 배당·커버드콜 계좌를
+          고객이 직접 입력한 데이터 기반으로 정리하는
+          개인 투자자용 웹 대시보드 제작 서비스입니다.
         </p>
 
         <div class="hero-actions">
-          <a class="primary" href="#contact">제작 문의하기</a>
-          <a class="secondary" href="#experience">인터페이스 보기</a>
+          <a class="primary" href="#contact">상담 문의하기</a>
+          <a class="secondary" href="#demo">데모 화면 보기</a>
         </div>
 
         <div class="micro-disclaimer">
           <span>NO BROKERAGE LOGIN</span>
-          <span>LOCAL BACKUP</span>
+          <span>CUSTOMER INPUT DATA</span>
           <span>NOT INVESTMENT ADVICE</span>
         </div>
       </div>
 
-      <section class="hero-stage screenshot-carousel-stage" aria-label="실제 대시보드 화면 미리보기">
+      <section id="demo" class="hero-stage screenshot-carousel-stage" aria-label="실제 대시보드 화면 미리보기">
         <article class="dashboard-carousel" aria-label="실제 대시보드 스크린샷 캐러셀">
           <div class="carousel-topline">
             <span>LIVE DASHBOARD PREVIEW</span>
@@ -1791,13 +1890,13 @@ h3 {
       <div class="section-index">01</div>
       <div class="editorial-copy">
         <p class="section-kicker">Interface Experience</p>
-        <h2>단순한 표가 아니라, 투자 구조를 보여주는 개인용 인터페이스</h2>
+        <h2>종목을 추천하지 않습니다. 대신, 투자 데이터를 읽기 쉬운 구조로 재설계합니다.</h2>
       </div>
       <div class="editorial-grid">
         <article>
           <span>01</span>
           <h3>계좌별 분리</h3>
-          <p>스윙, 장기투자, 배당/커버드콜 계좌를 분리해 투자 목적별 상태를 확인합니다.</p>
+          <p>스윙, 장기투자, 배당·커버드콜 계좌를 목적별로 분리해 현재 상태를 확인합니다.</p>
         </article>
         <article>
           <span>02</span>
@@ -1868,59 +1967,86 @@ h3 {
     <section id="packages" class="section packages-section">
       <div class="section-head split">
         <div>
-          <p class="section-kicker">Packages</p>
-          <h2>작업 범위별 패키지</h2>
+          <p class="section-kicker">Launch Packages</p>
+          <h2>필요한 수준에 맞게 선택하세요</h2>
         </div>
-        <p>가격은 시작 기준이며, 맞춤 수정 범위와 납품 방식에 따라 조정됩니다.</p>
+        <p>
+          3A Portfolio Studio는 투자 판단을 대신하지 않습니다.
+          고객이 직접 입력한 투자 데이터를 더 읽기 쉬운 웹 대시보드 구조로 정리합니다.
+        </p>
       </div>
 
-      <div class="package-grid">
+      <div class="launch-note">
+        <span>초기 런칭가</span>
+        <p>표시 가격은 기본 시작가입니다. 고객 데이터 구조, 요청 화면 수, 수정 범위, 배포 방식에 따라 최종 견적은 달라질 수 있습니다.</p>
+      </div>
+
+      <div class="package-grid package-grid-v15">
         <article>
           <span class="package-number">01</span>
-          <h3>Basic</h3>
-          <strong>190,000원부터</strong>
+          <h3>Starter</h3>
+          <strong>79,000원</strong>
+          <p class="package-summary">완성형 대시보드 파일을 받아 직접 사용하는 입문형 패키지입니다.</p>
           <ul>
-            <li>3계좌 기본 대시보드</li>
-            <li>보유 종목 관리</li>
-            <li>계좌별 평가금액 및 비중</li>
-            <li>기본 차트</li>
-            <li>백업 / 복원</li>
+            <li>완성형 대시보드 파일 제공</li>
+            <li>샘플 데이터 포함</li>
+            <li>기본 사용법 안내</li>
+            <li>고객이 직접 데이터 입력</li>
+            <li>개별 맞춤 수정 없음</li>
           </ul>
         </article>
 
         <article class="featured">
           <span class="package-number">02</span>
-          <em>Recommended</em>
+          <em>Most Recommended</em>
           <h3>Standard</h3>
-          <strong>490,000원부터</strong>
+          <strong>149,000원</strong>
+          <p class="package-summary">3계좌 통합 구조를 고객 상황에 맞게 세팅하는 대표 패키지입니다.</p>
           <ul>
-            <li>Basic 포함</li>
-            <li>스윙매매 복기 관리</li>
-            <li>장기투자 목표 비중 관리</li>
-            <li>배당 / 커버드콜 현금흐름</li>
-            <li>환율 설정</li>
-            <li>분할 매수 / 매도 기록</li>
+            <li>3계좌 통합 대시보드 세팅</li>
+            <li>계좌명 / 섹션명 일부 수정</li>
+            <li>CSV 입력 구조 안내</li>
+            <li>백업 / 복원 안내</li>
+            <li>1~2회 수정</li>
           </ul>
         </article>
 
         <article>
           <span class="package-number">03</span>
           <h3>Premium</h3>
-          <strong>990,000원부터</strong>
+          <strong>249,000원</strong>
+          <p class="package-summary">문구, 색상, 화면 구성 일부를 더 세밀하게 맞추는 고급 패키지입니다.</p>
           <ul>
-            <li>Standard 포함</li>
-            <li>고객 맞춤 화면 구성</li>
-            <li>계좌명 / 자산군 / 문구 수정</li>
-            <li>색상 및 화면 구성 조정</li>
-            <li>고급 시각화 추가</li>
+            <li>Standard 포함 내용 전체</li>
+            <li>색상 / 브랜드 톤 수정</li>
+            <li>화면 구성 일부 맞춤</li>
+            <li>추가 섹션 일부 반영</li>
+            <li>2~3회 수정</li>
+          </ul>
+        </article>
+
+        <article>
+          <span class="package-number">04</span>
+          <h3>Deploy Setup</h3>
+          <strong>399,000원~</strong>
+          <p class="package-summary">GitHub Pages 배포와 고객용 URL 세팅까지 포함한 배포 지원 패키지입니다.</p>
+          <ul>
+            <li>Premium 기준 세팅 상담</li>
+            <li>GitHub Pages 배포 지원</li>
+            <li>고객용 URL 정상 작동 확인</li>
+            <li>파일 구조 정리</li>
+            <li>기본 오류 확인</li>
           </ul>
         </article>
       </div>
 
       <div class="private-band">
-        <span>Private Deploy</span>
-        <p>비공개 사용 구조, 고객 전용 배포, 납품 폴더 정리, 초기 수정 지원이 필요한 경우 별도 견적으로 진행합니다.</p>
-        <strong>1,500,000원부터</strong>
+        <span>별도 안내</span>
+        <p>
+          더 큰 범위의 Private Deploy, 브랜드형 페이지, 유지관리, 추가 기능 개발은 별도 상담으로 진행합니다.
+          로그인 시스템, 증권사 API 연동, 자동매매 기능은 제공하지 않습니다.
+        </p>
+        <strong>상담 후 견적</strong>
       </div>
     </section>
 
@@ -1983,10 +2109,20 @@ h3 {
       </div>
 
       <div class="warning-box">
-        <strong>주의</strong>
+        <strong>투자 관련 고지</strong>
         <p>
-          운용자에게 사용자의 화면 캡처, 백업 파일, CSV 파일을 직접 전달하는 경우 해당 내용은 운용자가 볼 수 있습니다.
-          이 부분을 참고하여 운용자에게 수정 사항 또는 추가 요구 사항을 요청해주시길 바랍니다.
+          본 서비스는 투자 자문, 종목 추천, 매수/매도 신호 제공 서비스가 아닙니다.
+          고객이 직접 입력한 투자 데이터를 정리하고 시각화하는 웹 대시보드 제작 서비스입니다.
+          투자 판단과 투자 결과에 대한 책임은 고객 본인에게 있습니다.
+        </p>
+      </div>
+
+      <div class="warning-box">
+        <strong>데이터 전달 관련 주의</strong>
+        <p>
+          증권사 로그인 정보, 비밀번호, API 키를 요청하지 않습니다.
+          다만 고객이 화면 캡처, CSV 파일, 백업 JSON 파일을 직접 전달하는 경우 해당 내용은 작업자가 확인할 수 있습니다.
+          민감한 정보는 마스킹하거나 샘플 데이터로 대체한 뒤 전달하는 것을 권장합니다.
         </p>
       </div>
     </section>
@@ -1994,17 +2130,22 @@ h3 {
     <section id="contact" class="section contact-section">
       <div class="contact-card">
         <p class="section-kicker">Contact</p>
-        <h2>제작 문의 전 아래 내용을 준비해주세요</h2>
+        <h2>상담 문의 전 아래 내용을 준비해주세요</h2>
+        <p class="contact-intro">
+          아직 실제 문의 링크가 확정되지 않았다면, 아래 버튼은 이메일 또는 크몽·숨고 상품 링크로 나중에 교체하면 됩니다.
+        </p>
         <ul>
-          <li>관리할 계좌 수</li>
+          <li>원하는 패키지: Starter / Standard / Premium / Deploy Setup</li>
+          <li>관리할 계좌 수와 계좌명</li>
           <li>투자 유형: 스윙 / 장기투자 / 배당 / 커버드콜</li>
           <li>원화·달러 자산 여부</li>
-          <li>필요한 기록 항목</li>
-          <li>기존 엑셀 또는 CSV 보유 여부</li>
-          <li>원하는 납품 방식</li>
+          <li>CSV 또는 기존 엑셀 보유 여부</li>
+          <li>직접 적용할지, 배포 세팅까지 맡길지 여부</li>
         </ul>
-        <div class="contact-actions">
-          <a class="primary" href="mailto:sangtheheon1029.com">이메일 문의하기</a>
+        <div class="contact-actions contact-actions-v15">
+          <a class="primary" href="mailto:your-email@example.com?subject=3A%20Portfolio%20Studio%20제작%20문의">상담 문의하기</a>
+          <a class="secondary" href="#demo">데모 화면 다시 보기</a>
+          <small>실제 등록 전 your-email@example.com을 본인 이메일, 구글폼, 카카오톡 오픈채팅, 크몽 또는 숨고 링크로 변경하세요.</small>
         </div>
       </div>
     </section>
